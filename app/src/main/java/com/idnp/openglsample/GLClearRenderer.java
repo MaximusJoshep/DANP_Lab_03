@@ -22,17 +22,20 @@ public class GLClearRenderer implements Renderer {
         gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
         gl.glLoadIdentity();
 
-        gl.glTranslatef(0.0f, 0.0f, -10.0f);
+        gl.glTranslatef(-5.0f, 0.0f, -10.0f);
         gl.glRotatef(mCubeRotation, 1.0f, 1.0f, 1.0f);
-        //gl.glRotatef(mTriRotation, 1.0f, 1.0f, 1.0f);
 
         mCube.draw(gl);
-        mTri.draw(gl);
-
         gl.glLoadIdentity();
+        mCubeRotation -= 0.35f;
 
-        mCubeRotation -= 0.15f;
-        mTriRotation +=  0.15f;
+        gl.glTranslatef(5.0f, 0.0f, -10.0f);
+        gl.glRotatef(mTriRotation, 1.0f, 1.0f, 1.0f);
+
+
+        mTri.draw(gl);
+        gl.glLoadIdentity();
+        mTriRotation +=  0.35f;
 
 
     }

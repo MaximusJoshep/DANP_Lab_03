@@ -13,7 +13,7 @@ import android.view.WindowManager;
 import javax.microedition.khronos.opengles.GL10;
 
 public class MainActivity extends AppCompatActivity {
-    private MainView mView;
+    //  private MainView mView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,10 +51,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(glView);
 
         // Now also create a view which contains the camera preview...
-        CameraView cameraView = new CameraView(this);
+        //CameraView cameraView = new CameraView(this);
         // ...and add it, wrapping the full screen size.
 
-      getWindow().addContentView(cameraView, new WindowManager.LayoutParams(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT));
+      //getWindow().addContentView(cameraView, new WindowManager.LayoutParams(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT));
 
 
     }
